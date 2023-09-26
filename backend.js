@@ -30,7 +30,7 @@ app.get('/game', (req, res) => {
 })
 
 const backEndPlayers = {}
-const SPEED = 6
+const SPEED = 8
 
 io.on('connection', (socket) => {
   console.log('a new user connected')
@@ -38,7 +38,7 @@ io.on('connection', (socket) => {
     //create new player
     x: 500 * Math.random(),
     y: 500 * Math.random(),
-    color: `hsl(${Math.random() * 360}, 100%, 50%)`,
+    color: `hsl(${Math.random() * 360}, 50%, 50%)`,
     sequenceNumber: 0
   }
 

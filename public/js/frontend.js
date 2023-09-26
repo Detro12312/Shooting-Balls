@@ -95,7 +95,7 @@ const keys = {
     pressed: false
   }
 }
-let SPEED = 6
+let SPEED = 8
 const playerInputs = []
 let sequenceNumber = 0
 setInterval(() => {
