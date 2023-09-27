@@ -23,7 +23,7 @@ socket.on('updatePlayers', (bacEndPlayers) => {
       frontEndPlayers[id] = new Player({
         x: bacEndPlayer.x,
         y: bacEndPlayer.y,
-        radius: 10,
+        radius: 15,
         color: bacEndPlayer.color
       })
     } else {
@@ -70,7 +70,7 @@ socket.on('updatePlayers', (bacEndPlayers) => {
 let animationId
 function animate() {
   animationId = requestAnimationFrame(animate)
-  c.fillStyle = 'rgba(0, 0, 0, 0.1)'
+  c.fillStyle = 'rgba(0, 0, 0, 0.3)'
   c.fillRect(0, 0, canvas.width, canvas.height)
 
   for (const id in frontEndPlayers) {
